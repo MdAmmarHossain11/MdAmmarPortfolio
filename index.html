@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Ammar's Portfolio</title><meta name="title" content="Md. Ammar Hossain | Portfolio"/><meta name="description" content="Md. Ammar Hossain a CSE undergraduate Teaching Assistant at United International University. Explore his portfolio showcasing programming, web development, data analysis, teaching, leadership, and project management skills."/><meta name="keywords" content="Md. Ammar Hossai, Mohammad, Muhammad, Hossain, Portfolio, CSE student, Computer Science, United International University, UIU, UGA, TA, Undergraduate Teaching Assistant, HR, Head of HR, Human Resources, Editor, CA, Campus Ambassador, Organizer, Name, UIU CSE Fest, UIU DCCSA, UIU APP Forum, UIU Computer Club, UIU Sports Club, UIU Robotics Club, UIU MUN Club, UIU Finance Club, UIU English Language Forum, IEEE UIU Student Branch, UIU Mars Rover Team, portfolio, programming, C, C++, Java, Python, SQL, web development, HTML, CSS, React, Node.js, Django, JavaFX, Scene Builder, MySQL, SQLite, data analysis, project management, teaching assistant, editor, UIU APP Forum, campus ambassador, event organizer, leadership, software development, Arduino, Logisim, NI Multisim, Git, Linux, Figma, Canva, PowerPoint, Excel, VS Code, Google Colab, Jira, bangla news, current News, online paper, daily news paper, bangladesh news, এমডি আম্মার হোসেন, মোহাম্মদ, মুহাম্মদ, হোসেন, পোর্টফোলিও, সিএসই শিক্ষার্থী, কম্পিউটার সায়েন্স, ইউনাইটেড ইন্টারন্যাশনাল ইউনিভার্সিটি, আন্ডারগ্র্যাজুয়েট টিচিং অ্যাসিস্ট্যান্ট, হেড, হিউম্যান রিসোর্সেস, সম্পাদক, ক্যাম্পাস অ্যাম্বাসেডর, আয়োজক, পোর্টফোলিও, প্রোগ্রামিং, ওয়েব ডেভেলপমেন্ট, ডেটা বিশ্লেষণ, প্রজেক্ট ম্যানেজমেন্ট, টিচিং অ্যাসিস্ট্যান্ট, নেতৃত্ব, সফটওয়্যার ডেভেলপমেন্ট, অনলাইন, বাংলাদেশ, পত্রিকা, আন্তর্জাতিক, অর্থনীতি, খেলা, ফিচার, বিজ্ঞান ও প্রযুক্তি, বলিউড, হলিউড, বাংলা, স্বপ্ন নিয়ে, আনন্দ, সাহিত্য, প্রজন্ম ডট কম, কম্পিউটার, মোবাইল ফোন, অটোমোবাইল, মহাকাশ, গেমস, মাল্টিমিডিয়া"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            dark: '#2563eb'
+                        },
+                        secondary: {
+                            light: '#10b981',
+                            dark: '#059669'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .light .gradient-text {
+            background-image: linear-gradient(45deg, #3b82f6, #10b981);
+        }
+        .dark .gradient-text {
+            background-image: linear-gradient(45deg, #60a5fa, #34d399);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="light bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold gradient-text">Ammar</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Md. Ammar Hossain</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Undergraduate Teaching Assistant</h2>
+                    <p class="text-lg mb-8 text-gray-600 dark:text-gray-300 max-w-lg">
+                        I am a <strong>Computer Science and Engineering student</strong> at United International University (UIU). Currently, I work as an <strong>Undergraduate Teaching Assistant</strong> at UIU, and I have experience as an <strong>Editor</strong> at Aspect Series, <strong>Head of HR</strong> at UIU APP Forum, and <strong>Campus Ambassador</strong> at ICT Olympiad Bangladesh. I build productive relationships through effective communication and guidance, and I am committed to continuous learning while contributing effectively using my technical, analytical, and organizational strengths.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:opacity-90 transition-opacity">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-slide-up">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-light dark:border-primary-dark">
+                        <img src="https://res.cloudinary.com/dgx3kzalt/image/upload/v1763401739/Ammar_Pic_xvhzur.jpg"
+                             alt="Profile" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary-light dark:bg-primary-dark opacity-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">About <span class="gradient-text">Me</span></h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="About" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                 <!-- <h3 class="text-2xl font-semibold mb-4">Who I Am</h3> -->
+                    <p class="mb-6 text-gray-600 dark:text-gray-300">
+                        I am <strong>Md. Ammar Hossain</strong>, an undergraduate student of Computer Science and Engineering at United International University (UIU). I am a passionate learner who enjoys exploring technical development, teaching, leadership, and community engagement. <br> <br>
+
+As an <strong>Undergraduate Teaching Assistant</strong>, I have strengthened my communication, mentoring, and coordination skills by assisting students in lab sessions. I also served as an <strong>Editor</strong> at Aspect Series, where I enhanced my abilities in content management and professional communication. <br> <br>
+
+My leadership experience includes working as the <strong>Head of Human Resources</strong> at UIU APP Forum and serving as a <strong>Campus Ambassador</strong> Campus Ambassador for ICT Olympiad Bangladesh (Season 2). I also contributed as an <strong>Organizer</strong> for UIU CSE Fest 2025, working with the Event and Logistics Team to ensure smooth event execution. <br> <br>
+
+Technically, I have experience in C, C++, Java, Python, SQL, and web development using HTML, CSS, React, Node.js, PHP, Django, JavaFX, and Scene Builder. I am proficient with backend tools like MySQL and SQLite, and have hands-on hardware experience with Logisim, NI Multisim, and Arduino IDE. My workflow is supported by tools such as Git, Linux, VS Code, Google Colab, Excel, Word, PowerPoint, Figma, Canva, and Jira. I also maintain an English typing speed of 30 WPM. <br> <br>
+
+Across all my roles developer, mentor, organizer, ambassador, and editor, I strive to maintain professionalism, strong teamwork, and continuous learning. I aim to contribute meaningfully to future projects by combining my organizational, analytical, and technical strengths while gaining industry experience. <br> 
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                    <i class="fas fa-graduation-cap text-primary-light dark:text-primary-dark"></i>
+                                </div>
+                                <h4 class="font-semibold">Education</h4>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                B.Sc. in Computer Science and Engineering<br>
+                                United International University <br>
+                                United City, Madani Avenue, Dhaka
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 rounded-full bg-secondary-light/10 dark:bg-secondary-dark/10 mr-4">
+                                    <i class="fas fa-briefcase text-secondary-light dark:text-secondary-dark"></i>
+                                </div>
+                                <h4 class="font-semibold">Experience</h4>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Undergraduate Teaching Assistant<br>
+                                United International University, 2025-Present
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="gradient-text">Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Project 1" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Innovest</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Innovest is an integrated platform that streamlines fundraising, investing, events, community engagement, and real-time communication for startups and investors.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Django</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="https://github.com/mdalemrananas/InnoVest-StartUp-Investment-Platform" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://res.cloudinary.com/dgx3kzalt/image/upload/v1763675298/LFRSPC_Body_myonma.jpg" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">LFRSPC</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            LFRSPC Robot is an Arduino and ESP32-based autonomous line-following robot that cleans solar panels using a two-step water spraying and wiper mechanism, achieving 90–97% efficiency with minimal human intervention.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Arduino</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">ESP32</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">IR Sensors</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://youtu.be/jrlOBdTdlpQ?si=fdV0cbfuH6-ZokfF" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="https://github.com/gitForAmmar11/Electronics-Project-LFRSPC" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Job Hunter</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            The Job Hunter System is a user-friendly web platform that connects job seekers with diverse opportunities while allowing companies to efficiently recruit qualified talent.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Html</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="#" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors inline-flex items-center">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="gradient-text">Skills</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Skill: C -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-code text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">C</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: C++ -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-code text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">C++</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Java -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-java text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Java</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Python -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-python text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Python</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: SQL -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-database text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">SQL</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: HTML -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-html5 text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">HTML</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: CSS -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-css3-alt text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">CSS</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: React -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-react text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">React</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Node.js (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fab fa-node-js text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Node.js</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: JavaFX (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fas fa-code text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">JavaFX</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: PHP (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fab fa-php text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">PHP</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Django (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fas fa-leaf text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Django</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Scene Builder (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-paint-brush text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Scene Builder</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: MySQL (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-database text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">MySQL</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: SQLite (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-database text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">SQLite</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Arduino IDE (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-microchip text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Arduino IDE</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Git (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-git-alt text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Git</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Linux (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-linux text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Linux</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Canva (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-palette text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Canva</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 93%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: PowerPoint (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-file-powerpoint text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">PowerPoint</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill - Figma -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-figma text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Figma</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill - Jira -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-project-diagram text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Jira</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 8 -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-mobile-alt text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Responsive Design</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In <span class="gradient-text">Touch</span></h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <p class="mb-8 text-gray-600 dark:text-gray-300">
+                        Feel free to reach out to me for project inquiries, collaborations, or just to say hello. 
+                        I'll get back to you as soon as possible.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-envelope text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-300">mdammarhossain11@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-phone-alt text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01886501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fab fa-whatsapp text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">WhatsApp</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01779501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                            <i class="fab fa-telegram-plane text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telegram</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01779501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-map-marker-alt text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Khilkhet, Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gitForAmmar11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohammadammar11/" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://discord.com/users/mohammad.ammar.hossain11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@VoiceofAmmar11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/mohammad.ammar.11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ammar_hossain11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2"> 
+                    <div id="formPopup" 
+                        class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all"> 
+                    </div> 
+                    <form id="contactForm" 
+                        action="https://formsubmit.co/mdammarhossain11@gmail.com" 
+                        method="POST" 
+                        class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm"> 
+                        
+                        <!-- FormSubmit Required Hidden Inputs --> 
+                        <input type="hidden" name="_captcha" value="false"> 
+                        <input type="hidden" name="_subject" value="New Message From Portfolio"> 
+                        
+                        <input type="hidden" name="_next" value="https://gitForAmmar11.github.io/AmmarPortfolio/"> 
+                        
+                        <!-- Popup Message --> 
+                        <div id="formPopup" 
+                            class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all duration-300"> 
+                        </div> 
+                        
+                        <!-- Name --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Name</label> 
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Email --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Email</label> 
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Subject --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Subject</label> 
+                            <input type="text" id="subject" name="subject" required 
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Message --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Message</label> 
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"></textarea> 
+                        </div> 
+                        
+                        <!-- Submit Button --> 
+                        <button type="submit" class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:opacity-90"> 
+                            Send Message 
+                        </button> 
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Ammar</a>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">© 2025 Md. Ammar Hossain. All Rights Reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved user preference or use system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.add(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation classes when elements come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.animation = 'fadeIn 0.5s ease-in-out forwards';
+        });
+        
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.animation = 'slideUp 0.5s ease-out forwards';
+        });
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+        // Trigger once on page load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("formPopup");
+
+    form.addEventListener("submit", function (e) {
+
+        // Stop submission for validation
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name || !email || !subject || !message) {
+            showPopup("⚠ Please fill out all fields!", "bg-red-500 text-white");
+            return;
+        }
+
+        if (!emailPattern.test(email)) {
+            showPopup("Invalid email address!", "bg-yellow-500 text-black");
+            return;
+        }
+
+        // 🚀 All good — NOW submit the form to FormSubmit
+        showPopup("Message sent successfully!", "bg-green-500 text-white");
+
+        setTimeout(() => {
+            form.submit(); // send email to Gmail
+        }, 800);
+    });
+
+    function showPopup(message, classes) {
+        popup.textContent = message;
+        popup.className = `mb-4 p-4 rounded-lg text-center font-semibold ${classes}`;
+        popup.classList.remove("hidden");
+        popup.style.opacity = "1";
+
+        setTimeout(() => { popup.style.opacity = "0"; }, 2500);
+        setTimeout(() => { popup.classList.add("hidden"); }, 3000);
+    }
+});
+</script>
+
+</body>
+
+</html>
