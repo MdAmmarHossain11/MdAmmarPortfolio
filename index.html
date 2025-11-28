@@ -815,7 +815,6 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
         // Trigger once on page load
         window.addEventListener('load', animateOnScroll);
     </script>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -824,27 +823,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", function (e) {
 
-        // Validate manually, then allow submit
+        // Stop submission for validation
+        e.preventDefault();
+
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
 
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!name || !email || !subject || !message) {
-            e.preventDefault();
-            showPopup("⚠ Please fill all fields", "bg-red-500 text-white");
+            showPopup("⚠ Please fill out all fields!", "bg-red-500 text-white");
             return;
         }
 
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            e.preventDefault();
             showPopup("Invalid email address!", "bg-yellow-500 text-black");
             return;
         }
 
-        // SUCCESS — show popup but DO NOT block actual submit
-        showPopup("Message sent! Redirecting...", "bg-green-500 text-white");
+        // 🚀 All good — NOW submit the form to FormSubmit
+        showPopup("Message sent successfully!", "bg-green-500 text-white");
+
+        setTimeout(() => {
+            form.submit(); // send email to Gmail
+        }, 800);
     });
 
     function showPopup(message, classes) {
@@ -853,8 +857,8 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.remove("hidden");
         popup.style.opacity = "1";
 
-        setTimeout(() => popup.style.opacity = "0", 2000);
-        setTimeout(() => popup.classList.add("hidden"), 2500);
+        setTimeout(() => { popup.style.opacity = "0"; }, 2500);
+        setTimeout(() => { popup.classList.add("hidden"); }, 3000);
     }
 });
 </script>
@@ -862,5 +866,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
 
 
