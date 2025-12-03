@@ -656,11 +656,9 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                 </div>
                 
                 <div class="md:w-1/2"> 
-                    <div id="formPopup" 
-                        class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all"> 
-                    </div> 
+                
                     <form id="contactForm" 
-                        action="https://formsubmit.co/mdammar10696@gmail.com" 
+                        action="https://formsubmit.co/mdammarhossain11@gmail.com" 
                         method="POST" 
                         class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm"> 
                         
@@ -668,17 +666,14 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                         <input type="hidden" name="_captcha" value="false"> 
                         <input type="hidden" name="_subject" value="New Message From Portfolio"> 
                         
-                        <input type="hidden" name="_next" value="https://gitForAmmar11.github.io/MdAmmarPortfolio/"> 
+                        <input type="hidden" name="_next" value="https://gitForAmmar11.github.io/AmmarPortfolio/"> 
                         
-                        <!-- Popup Message --> 
-                        <div id="formPopup" 
-                            class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all duration-300"> 
-                        </div> 
                         
                         <!-- Name --> 
                         <div class="mb-6"> 
                             <label class="block mb-2 font-medium">Name</label> 
                             <input type="text" id="name" name="name" required 
+                            placeholder="Enter your name"
                                 class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
                         </div> 
                         
@@ -686,6 +681,7 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                         <div class="mb-6"> 
                             <label class="block mb-2 font-medium">Email</label> 
                             <input type="email" id="email" name="email" required 
+                            placeholder="Enter a valid email to get a reply"
                                 class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
                         </div> 
                         
@@ -693,6 +689,7 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                         <div class="mb-6"> 
                             <label class="block mb-2 font-medium">Subject</label> 
                             <input type="text" id="subject" name="subject" required 
+                            placeholder="Write the subject (e.g., Regarding Project Inquiry)"
                                 class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
                         </div> 
                         
@@ -700,14 +697,25 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                         <div class="mb-6"> 
                             <label class="block mb-2 font-medium">Message</label> 
                             <textarea id="message" name="message" rows="5" required 
+                            placeholder="Write your message here..."
                                 class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"></textarea> 
                         </div> 
                         
                         <!-- Submit Button --> 
-                        <button type="submit" class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:opacity-90"> 
-                            Send Message 
-                        </button> 
+                        <button 
+                            type="submit" 
+                            class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white 
+                            rounded-lg hover:opacity-90 transition-opacity">
+                            Send Message
+                        </button>
+
                     </form>
+
+                    <!-- SUCCESS / ERROR MESSAGE BELOW THE BUTTON -->
+                        <div id="formPopup" 
+                            class="hidden opacity-0 transition-opacity duration-500 
+                                    mt-4 p-4 rounded-lg text-center font-semibold">
+                        </div>
 
 
                 </div>
@@ -815,6 +823,7 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
         // Trigger once on page load
         window.addEventListener('load', animateOnScroll);
     </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -866,6 +875,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
-
-
-
