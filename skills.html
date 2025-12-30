@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Md. Ammar's Portfolio</title>
+    <meta name="title" content="Md. Ammar Hossain | Skills"/>
+    <meta name="description" content="Md. Ammar Hossain's technical and professional skills in programming, web development, and more."/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            dark: '#2563eb'
+                        },
+                        secondary: {
+                            light: '#10b981',
+                            dark: '#059669'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .light .gradient-text {
+            background-image: linear-gradient(45deg, #3b82f6, #10b981);
+        }
+        .dark .gradient-text {
+            background-image: linear-gradient(45deg, #60a5fa, #34d399);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="light bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="min-h-screen py-20 bg-gray-100 dark:bg-gray-800 pt-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="gradient-text">Skills</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Skill: C -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-code text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">C</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: C++ -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-code text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">C++</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Java -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-java text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Java</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Python -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-python text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Python</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: SQL -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-database text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">SQL</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: HTML -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-html5 text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">HTML</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: CSS -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-css3-alt text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">CSS</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: React -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-react text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">React</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Node.js (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fab fa-node-js text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Node.js</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: JavaFX (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fas fa-code text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">JavaFX</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: PHP (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fab fa-php text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">PHP</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Django (Orange Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 rounded-full">
+                        <i class="fas fa-leaf text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Django</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-orange-500 dark:bg-orange-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Scene Builder (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-paint-brush text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Scene Builder</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: MySQL (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-database text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">MySQL</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: SQLite (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-database text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">SQLite</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Arduino IDE (Purple Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                        <i class="fas fa-microchip text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Arduino IDE</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-purple-600 dark:bg-purple-400 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Git (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-git-alt text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Git</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Linux (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fab fa-linux text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Linux</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: Canva (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-palette text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Canva</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 93%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill: PowerPoint (Blue Theme) -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary-light/10 dark:bg-primary-dark/10 rounded-full">
+                        <i class="fas fa-file-powerpoint text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">PowerPoint</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-primary-light dark:bg-primary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill - Figma -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fab fa-figma text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Figma</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill - Jira -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-project-diagram text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Jira</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 8 -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-secondary-light/10 dark:bg-secondary-dark/10 rounded-full">
+                        <i class="fas fa-mobile-alt text-3xl text-secondary-light dark:text-secondary-dark"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Responsive Design</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5">
+                        <div class="bg-secondary-light dark:bg-secondary-dark h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">© 2025 Md. Ammar Hossain. All Rights Reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved user preference or use system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.add(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
