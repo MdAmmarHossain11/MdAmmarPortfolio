@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Md. Ammar's Portfolio</title>
+    <meta name="title" content="Md. Ammar Hossain | Projects"/>
+    <meta name="description" content="Md. Ammar Hossain's portfolio projects in web development, software development, and more."/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            dark: '#2563eb'
+                        },
+                        secondary: {
+                            light: '#10b981',
+                            dark: '#059669'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .light .gradient-text {
+            background-image: linear-gradient(45deg, #3b82f6, #10b981);
+        }
+        .dark .gradient-text {
+            background-image: linear-gradient(45deg, #60a5fa, #34d399);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="light bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen py-20 bg-gray-100 dark:bg-gray-800 pt-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="gradient-text">Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Project 1" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Innovest</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Innovest is an integrated platform that streamlines fundraising, investing, events, community engagement, and real-time communication for startups and investors.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Django</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="https://github.com/mdalemrananas/InnoVest-StartUp-Investment-Platform" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://res.cloudinary.com/dgx3kzalt/image/upload/v1763675298/LFRSPC_Body_myonma.jpg" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">LFRSPC</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            LFRSPC Robot is an Arduino and ESP32-based autonomous line-following robot that cleans solar panels using a two-step water spraying and wiper mechanism, achieving 90–97% efficiency with minimal human intervention.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Arduino</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">ESP32</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">IR Sensors</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://youtu.be/jrlOBdTdlpQ?si=fdV0cbfuH6-ZokfF" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="https://github.com/gitForAmmar11/Electronics-Project-LFRSPC" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Job Hunter</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            The Job Hunter System is a user-friendly web platform that connects job seekers with diverse opportunities while allowing companies to efficiently recruit qualified talent.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Html</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary-light dark:text-primary-dark hover:underline">Live Demo</a>
+                            <a href="#" class="text-gray-500 hover:underline">Github Ripo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">© 2025 Md. Ammar Hossain. All Rights Reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.classList.toggle('dark', currentTheme === 'dark');
+        
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
