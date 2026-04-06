@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Md. Ammar's Portfolio</title>
+    <meta name="title" content="Md. Ammar Hossain | Contact"/>
+    <meta name="description" content="Get in touch with Md. Ammar Hossain for project inquiries, collaborations, or just to say hello."/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            dark: '#2563eb'
+                        },
+                        secondary: {
+                            light: '#10b981',
+                            dark: '#059669'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .light .gradient-text {
+            background-image: linear-gradient(45deg, #3b82f6, #10b981);
+        }
+        .dark .gradient-text {
+            background-image: linear-gradient(45deg, #60a5fa, #34d399);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="light bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 pt-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In <span class="gradient-text">Touch</span></h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <p class="mb-8 text-gray-600 dark:text-gray-300">
+                        Feel free to reach out to me for project inquiries, collaborations, or just to say hello. 
+                        I'll get back to you as soon as possible.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-envelope text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-300">mdammarhossain11@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-phone-alt text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01886501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fab fa-whatsapp text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">WhatsApp</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01779501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                            <i class="fab fa-telegram-plane text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telegram</h4>
+                                <p class="text-gray-600 dark:text-gray-300">01779501230</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 mr-4">
+                                <i class="fas fa-map-marker-alt text-primary-light dark:text-primary-dark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Khilkhet, Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gitForAmmar11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohammadammar11/" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://discord.com/users/mohammad.ammar.hossain11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@VoiceofAmmar11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/mohammad.ammar.11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ammar_hossain11" class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2"> 
+                
+                    <form id="contactForm" class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm"> 
+                        
+                        <!-- Name --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Name</label> 
+                            <input type="text" id="name" name="name" required 
+                            placeholder="Enter your name"
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Email --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Email</label> 
+                            <input type="email" id="email" name="email" required 
+                            placeholder="Enter a valid email to get a reply"
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Subject --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Subject</label> 
+                            <input type="text" id="subject" name="subject" required 
+                            placeholder="Write the subject (e.g., Regarding Project Inquiry)"
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"> 
+                        </div> 
+                        
+                        <!-- Message --> 
+                        <div class="mb-6"> 
+                            <label class="block mb-2 font-medium">Message</label> 
+                            <textarea id="message" name="message" rows="5" required 
+                            placeholder="Write your message here..."
+                                class="w-full px-4 py-3 border rounded-lg dark:bg-gray-600 dark:border-gray-500"></textarea> 
+                        </div> 
+                        
+                        <!-- Submit Button --> 
+                        <button 
+                            type="submit" 
+                            class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white 
+                            rounded-lg hover:opacity-90 transition-opacity">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                    <!-- SUCCESS / ERROR MESSAGE BELOW THE BUTTON -->
+                        <div id="formPopup" 
+                            class="hidden opacity-0 transition-opacity duration-500 
+                                    mt-4 p-4 rounded-lg text-center font-semibold">
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">Ammar</a>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">© 2025 Md. Ammar Hossain. All Rights Reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.classList.toggle('dark', currentTheme === 'dark');
+        
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <script>
+// Form submission handler - sends to Python backend
+function setupContactForm() {
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("formPopup");
+    
+    if (!form) {
+        console.error('❌ Contact form not found!');
+        return;
+    }
+    console.log('✅ Contact form found and ready');
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        console.log('📨 Form submitted');
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        console.log('📝 Form values:', { name, email, subject, message });
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name || !email || !subject || !message) {
+            showPopup("⚠ Please fill out all fields!", "bg-red-500 text-white");
+            return;
+        }
+
+        if (!emailPattern.test(email)) {
+            showPopup("❌ Invalid email address!", "bg-yellow-500 text-black");
+            return;
+        }
+
+        showPopup("📧 Sending your message...", "bg-blue-500 text-white");
+
+        try {
+            const response = await fetch("http://localhost:8001/send", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    from_email: email,
+                    subject: subject,
+                    message: message
+                })
+            });
+
+            const result = await response.json();
+            
+            if (response.ok) {
+                console.log('✅ SUCCESS! Message sent');
+                showPopup("✅ Message sent successfully! I'll reply soon.", "bg-green-500 text-white");
+                form.reset();
+            } else {
+                console.error('❌ Server error:', result.error);
+                showPopup("❌ Error: " + (result.error || "Failed to send"), "bg-red-500 text-white");
+            }
+        } catch (error) {
+            console.error('❌ Network error:', error.message);
+            showPopup("❌ Error: " + error.message, "bg-red-500 text-white");
+        }
+    });
+
+    function showPopup(message, classes) {
+        popup.textContent = message;
+        popup.className = `mb-4 p-4 rounded-lg text-center font-semibold ${classes}`;
+        popup.classList.remove("hidden");
+        popup.style.opacity = "1";
+
+        setTimeout(() => { popup.style.opacity = "0"; }, 3000);
+        setTimeout(() => { popup.classList.add("hidden"); }, 3500);
+    }
+}
+
+// Initialize form when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupContactForm);
+} else {
+    setupContactForm();
+}
+</script>
+
+</body>
+</html>
