@@ -764,27 +764,23 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
     </script>
 
 <script>
-// Form submission handler - sends to Python backend
 function setupContactForm() {
     const form = document.getElementById("contactForm");
     const popup = document.getElementById("formPopup");
-    
-    if (!form) {
-        console.error('❌ Contact form not found!');
+    const submitButton = form ? form.querySelector("button[type='submit']") : null;
+
+    if (!form || !popup) {
+        console.error('❌ Contact form or popup not found.');
         return;
     }
-    console.log('✅ Contact form found and ready');
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
-        console.log('📨 Form submitted');
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
-
-        console.log('📝 Form values:', { name, email, subject, message });
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -798,35 +794,42 @@ function setupContactForm() {
             return;
         }
 
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
+
         showPopup("📧 Sending your message...", "bg-blue-500 text-white");
 
         try {
-            const response = await fetch("http://localhost:8001/send", {
+            const formData = new FormData();
+            formData.append("name", name);
+            formData.append("email", email);
+            formData.append("subject", subject);
+            formData.append("message", message);
+            formData.append("_subject", `Portfolio Contact: ${subject}`);
+            formData.append("_captcha", "false");
+            formData.append("_template", "table");
+
+            const response = await fetch("https://formsubmit.co/ajax/mdammarhossain11@gmail.com", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name: name,
-                    from_email: email,
-                    subject: subject,
-                    message: message
-                })
+                body: formData
             });
 
-            const result = await response.json();
-            
             if (response.ok) {
-                console.log('✅ SUCCESS! Message sent');
                 showPopup("✅ Message sent successfully! I'll reply soon.", "bg-green-500 text-white");
                 form.reset();
             } else {
-                console.error('❌ Server error:', result.error);
-                showPopup("❌ Error: " + (result.error || "Failed to send"), "bg-red-500 text-white");
+                throw new Error("The delivery service rejected the request.");
             }
         } catch (error) {
-            console.error('❌ Network error:', error.message);
-            showPopup("❌ Error: " + error.message, "bg-red-500 text-white");
+            console.error('❌ Network error:', error);
+            showPopup("❌ Unable to send right now. Please email me directly at mdammarhossain11@gmail.com.", "bg-red-500 text-white");
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+            }
         }
     });
 
@@ -836,12 +839,16 @@ function setupContactForm() {
         popup.classList.remove("hidden");
         popup.style.opacity = "1";
 
-        setTimeout(() => { popup.style.opacity = "0"; }, 3000);
-        setTimeout(() => { popup.classList.add("hidden"); }, 3500);
+        clearTimeout(showPopup.timeoutId);
+        showPopup.timeoutId = setTimeout(() => {
+            popup.style.opacity = "0";
+            setTimeout(() => {
+                popup.classList.add("hidden");
+            }, 350);
+        }, 4000);
     }
 }
 
-// Initialize form when page loads
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupContactForm);
 } else {
