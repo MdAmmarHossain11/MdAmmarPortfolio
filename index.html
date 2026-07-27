@@ -80,7 +80,7 @@
             width: 100%;
         }
         .hero-image {
-            filter: blur(2px);
+            filter: blur(1.6px) brightness(0.9);
             transform: scale(1.05);
         }
     </style>
@@ -130,13 +130,44 @@
         <img src="https://res.cloudinary.com/dgx3kzalt/image/upload/v1785168374/Ammar_gsun6u.heic"
              alt="Hero background"
              class="hero-image absolute inset-0 w-full h-full object-cover object-center">
-        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/25 via-black/10 to-black/25"></div>
         <div class="relative z-10 flex min-h-[70vh] md:min-h-[85vh] items-center justify-center px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl text-center text-white">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
                     Welcome to<br>
                     <span class="block mt-3">MD. AMMAR HOSSAIN's Portfolio</span>
                 </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Md. Ammar Hossain</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Undergraduate Teaching Assistant</h2>
+                    <p class="text-lg mb-8 text-gray-600 dark:text-gray-300 max-w-lg">
+                        I am a <strong>Computer Science and Engineering graduate</strong> from United International University (UIU). Currently, I work remotely on contractual software development projects. I have experience as an <strong>Undergraduate Teaching Assistant</strong> at UIU, <strong>Invigilator</strong> at IDP Education, <strong>Editor</strong> at Aspect Series, <strong>Head of HR</strong> at UIU APP Forum, and <strong>Campus Ambassador</strong> at ICT Olympiad Bangladesh. I am committed to continuous learning and contributing through my technical, analytical, and organizational skills.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="contact.html" class="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:opacity-90 transition-opacity">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-slide-up">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-light dark:ring-primary-dark ring-offset-4 ring-offset-gray-50 dark:ring-offset-gray-900">
+                        <img src="https://res.cloudinary.com/dgx3kzalt/image/upload/v1785002142/Ammar_vhnirm.jpg"
+                             alt="Profile" 
+                             class="w-full h-full object-cover object-center scale-105">
+                        <div class="absolute inset-0 bg-primary-light dark:bg-primary-dark opacity-10"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
