@@ -1,6 +1,6 @@
 # Md. Ammar Hossain Portfolio
 
-A modern personal portfolio website for Md. Ammar Hossain, built with plain HTML, Tailwind CSS, Font Awesome, and a lightweight Python server for handling contact form submissions.
+Welcome to my personal portfolio website repository. This project serves as a central hub for presenting my academic journey, professional experiences, technical expertise, research work, featured projects, achievements, certifications, and contact information. Developed with HTML, Tailwind CSS, Font Awesome, and a lightweight Python backend for contact form handling, the website emphasizes responsive design, clean UI, accessibility, and an intuitive user experience.
 
 ## Overview
 This portfolio showcases:
