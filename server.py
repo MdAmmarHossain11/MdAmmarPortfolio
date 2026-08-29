@@ -117,3 +117,6 @@ if __name__ == '__main__':
 # Instruction to run local machin (Ammar's Device)
 # cd D:\GOAL\Portfolio\MdAmmarPortfolio
 # python -m http.server 8000
+
+# output on local server
+# http://localhost:8000/
