@@ -1,6 +1,8 @@
-# Md. Ammar Hossain Portfolio
+# Md. Ammar Hossain's Portfolio
 
 Welcome to my personal portfolio website repository. This project serves as a central hub for presenting my academic journey, professional experiences, technical expertise, research work, featured projects, achievements, certifications, and contact information. Developed with HTML, Tailwind CSS, Font Awesome, and a lightweight Python backend for contact form handling, the website emphasizes responsive design, clean UI, accessibility, and an intuitive user experience.
+
+**Live Demo:**  https://mdammarhossain30.vercel.app
 
 ## Overview
 This portfolio showcases:
@@ -12,14 +14,14 @@ This portfolio showcases:
 - A dedicated CV page for visitors to request a copy or preview
 
 ## Project Structure
-- index.html — Home page with hero section and introduction
-- about.html — Personal background, experience, achievements, and education
-- projects.html — Featured projects and project details
-- skills.html — Technical and professional skill highlights
-- contact.html — Contact information and message form
-- cv.html — CV page with request-based download/preview actions
-- server.py — Python server for processing contact form submissions
-- assets/ — CV download assets
+- index.html - Home page with hero section and introduction
+- about.html - Personal background, experience, achievements, and education
+- projects.html - Featured projects and project details
+- skills.html - Technical and professional skill highlights
+- contact.html - Contact information and message form
+- cv.html - CV page with request-based download/preview actions
+- server.py - Python server for processing contact form submissions
+- assets/ - CV download assets
 
 ## Features
 - Responsive layout for desktop and mobile
@@ -58,3 +60,13 @@ Then open the contact page and submit a message. If needed, update the SMTP cred
 
 ## Contact
 For inquiries, collaboration, or CV requests, use the contact page or reach out through the listed social and contact details.
+
+## License
+
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for more information.
+
+## Support
+
+If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
